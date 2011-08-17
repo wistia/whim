@@ -18,10 +18,9 @@ To install whim:
 
   1) Clone whim into ~/.whim and set up the defaults:
 
-    cd ~/
-    git clone git://github.com/wistia/whim.git .whim
-    ln -s ~/.whim/local/default.vimrc .vimrc
-    ln -s ~/.whim/local/default.gvimrc .gvimrc
+    git clone git://github.com/wistia/whim.git ~/.whim
+    ln -s ~/.whim/local/default.vimrc ~/.vimrc
+    ln -s ~/.whim/local/default.gvimrc ~/.gvimrc
 
   2) This step is optional. If you want your command-t plugin to work:
 
@@ -33,7 +32,7 @@ To install whim:
      Create a new file in ~/.whim/local, 
       then symlink it as in step 2! For example:
 
-    ln -s ~/.whim/local/max.vimrc .vimrc
-    ln -s ~/.whim/local/max.gvimrc .gvimrc
+    ln -s ~/.whim/local/max.vimrc ~/.vimrc
+    ln -s ~/.whim/local/max.gvimrc ~/.gvimrc
 
   4) Restart (mac)vim and enjoy.
