@@ -1,3 +1,7 @@
+call pathogen#runtime_append_all_bundles()
+autocmd BufWritePost *.coffee silent CoffeeMake! -b | cwindow
+command Cake :w | !cake build:all
+
 " When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? "evim"
   finish
@@ -139,5 +143,6 @@ silent !mkdir -p ~/.vim/swap
 silent !mkdir -p ~/.vim/backups
 set directory=~/.vim/swap//
 set backupdir=~/.vim/backups
-
+au BufWritePre * let &backupdir = expand("$HOME") . '/.vim/backups'
+au BufWritePre * let &backupext = substitute(expand("%:p"), "\/", "_", "g")
 

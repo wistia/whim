@@ -1,2 +1,5 @@
 ruby/command-t/*.o
 ruby/command-t/ext.bundle
+ruby/command-t/*.log
+.DS_Store
+**/.DS_Store
