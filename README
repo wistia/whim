@@ -11,22 +11,24 @@
 
 To install whim:
 
-  1) Clone whim into ~/.whim:
+  1) Clone whim into ~/.whim and set up the defaults:
 
-    $ cd ~/
-    $ git clone git://github.com/wistia/whim.git .whim
+    cd ~/
+    git clone git://github.com/wistia/whim.git .whim
+    mv ~/.vimrc ~/.vimrc.backup 
+    mv ~/.gvimrc ~/.gvimrc.backup 
+    ln -s ~/.whim/local/default.vimrc .vimrc
+    ln -s ~/.whim/local/default.gvimrc .gvimrc
 
-  2) Edit your .vimrc to include this line:
-
-    source ~/.whim/init.vim
-    
-  3) Edit your .gvimrc to include this line:
-  
-    source ~/.whim/ginit.vim
-
-  4) This step is optional. If you want your command-t plugin to work:
+  2) This step is optional. If you want your command-t plugin to work:
 
     $ cd ~/.whim/ruby/command-t
     $ make
 
-  5) Restart (mac)vim!
+  3) Restart (mac)vim!
+
+  4) This step is optional. To customize, create a new file in 
+    ~/.whim/local, then symlink it as in step 2! For example:
+
+    ln -s ~/.whim/local/max.vimrc .vimrc
+    ln -s ~/.whim/local/max.gvimrc .gvimrc
