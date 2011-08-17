@@ -1,0 +1,32 @@
+               __                                 
+              /\ \          __                    
+ __  __  __   \ \ \___     /\_\        ___ ___    
+/\ \/\ \/\ \   \ \  _ `\   \/\ \     /' __` __`\  
+\ \ \_/ \_/ \   \ \ \ \ \   \ \ \    /\ \/\ \/\ \ 
+ \ \___x___/'    \ \_\ \_\   \ \_\   \ \_\ \_\ \_\
+  \/__//__/       \/_/\/_/    \/_/    \/_/\/_/\/_/
+                                                  
+  - Wistia's favorite vim setup
+
+
+To install whim:
+
+  1) Clone whim into ~/.whim:
+
+    $ cd ~/
+    $ git clone git://github.com/wistia/whim.git .whim
+
+  2) Edit your .vimrc to include this line:
+
+    source ~/.whim/init.vim
+    
+  3) Edit your .gvimrc to include this line:
+  
+    source ~/.whim/ginit.vim
+
+  4) This step is optional. If you want your command-t plugin to work:
+
+    $ cd ~/.whim/ruby/command-t
+    $ make
+
+  5) Restart (mac)vim!
