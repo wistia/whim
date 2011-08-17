@@ -1,7 +1,7 @@
 " Initialize all of Whim
 "
 
-set runtimepath=~/.whim,$VIMRUNTIME
+set runtimepath=$VIMRUNTIME,~/.whim
 
 source ~/.whim/vimrc
 
