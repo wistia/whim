@@ -1,4 +1,4 @@
-" Initialize all of Whim
+" Initialize non-gui Whim
 "
 
 set runtimepath=$VIMRUNTIME,~/.whim
