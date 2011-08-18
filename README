@@ -25,6 +25,7 @@ To install whim:
   2) This step is optional. If you want your command-t plugin to work:
 
     $ cd ~/.whim/ruby/command-t
+    $ ruby extconf.rb
     $ make
 
   3) This step is optional. If you want to customize your setup:
