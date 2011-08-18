@@ -1,4 +1,3 @@
-call pathogen#runtime_append_all_bundles()
 autocmd BufWritePost *.coffee silent CoffeeMake! -b | cwindow
 command Cake :w | !cake build:all
 
