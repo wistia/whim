@@ -9,4 +9,3 @@ map <leader>o :NERDTree<CR>
 map <leader>r :NERDTreeFind<CR>
 map <leader>x :NERDTreeClose<CR>
 
-AutoComplPopEnable

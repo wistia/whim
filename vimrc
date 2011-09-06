@@ -144,7 +144,3 @@ set directory=~/.vim/swap//
 set backupdir=~/.vim/backups
 au BufWritePre * let &backupdir = expand("$HOME") . '/.vim/backups'
 au BufWritePre * let &backupext = substitute(expand("%:p"), "\/", "_", "g")
-
-" disable automatic popup completion by default.
-" you can turn it on with AutoComplPopEnable in your local vimrc.
-AutoComplPopDisable
