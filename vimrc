@@ -1,4 +1,4 @@
-autocmd BufWritePost *.coffee silent CoffeeMake! -b | cwindow
+autocmd BufWritePost *.coffee silent CoffeeMake! -bp | cwindow
 command Cake :w | !cake build:all
 
 " When started as "evim", evim.vim will already have done these settings.
