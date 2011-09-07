@@ -102,14 +102,12 @@ hi Visual                        guibg=#30343F
 hi WarningMsg      guifg=#FFFFFF guibg=#333333 gui=bold
 hi WildMenu        guifg=#66D9EF guibg=#000000
 
-"hi Normal          guifg=#F8F8F2 guibg=#1B1D1E
 hi Normal          guifg=#F8F8F2 guibg=#171B1F
 hi Comment         guifg=#999999
 hi CursorLine                    guibg=#293739
 hi CursorColumn                  guibg=#293739
-hi LineNr          guifg=#BCBCBC guibg=#1A2026
-"hi NonText         guifg=#BCBCBC guibg=#232526
-hi NonText         guifg=#BCBCBC guibg=#232536
+hi LineNr          guifg=#BCBCBC guibg=#21262F
+hi NonText         guifg=#BCBCBC guibg=#202528
 
 "
 " Support for 256-color terminal

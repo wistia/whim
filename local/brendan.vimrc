@@ -1,8 +1,9 @@
 source ~/.whim/init.vim
 
-" disable auto complete
-" AutoComplPopDisable
+" enable auto complete
+au VimEnter * AutoComplPopEnable
 
+" sickest colorscheme on the planet
 colorscheme brendan
 
 " this is my home!!!
