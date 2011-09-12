@@ -1,4 +1,5 @@
 so ~/.whim/vimrc
+
 colo jellybeans
 let g:CommandTMaxFiles=30000
 let g:CommandTMaxHeight=18

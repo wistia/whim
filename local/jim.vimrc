@@ -1,1 +1,1 @@
-source ~/.whim/init.vim
+source ~/.whim/vimrc
