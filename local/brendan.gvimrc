@@ -1,0 +1,1 @@
+source ~/.whim/ginit.vim
