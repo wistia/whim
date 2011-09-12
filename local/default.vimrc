@@ -1,1 +1,0 @@
-source ~/.whim/init.vim
