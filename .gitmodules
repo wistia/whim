@@ -22,3 +22,6 @@
 [submodule "vim-ragtag"]
 	path = bundle/vim-ragtag
 	url = https://github.com/tpope/vim-ragtag.git
+[submodule "bundle/command-t"]
+	path = bundle/command-t
+	url = git://git.wincent.com/command-t.git
