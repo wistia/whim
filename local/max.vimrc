@@ -19,4 +19,12 @@ function s:BranchComplete(A,L,P)
 endfunction
 command! -nargs=1 -complete=customlist,s:BranchComplete Gcheckout call s:Gcheckout(<q-args>)
 
+function s:NERDTreeOpenFind()
+  wincmd l
+  NERDTree
+  wincmd l
+  NERDTreeFind
+endfunction
+map <leader>r :call <SID>NERDTreeOpenFind()<CR>
+
 au VimEnter * AutoComplPopEnable
