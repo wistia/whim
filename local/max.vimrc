@@ -8,16 +8,16 @@ let g:CommandTMatchWindowReverse=0
 
 function s:Gcheckout(branch)
   silent exec "Git checkout " . a:branch
-  let curBuff = bufnr("%")
-  silent! bufdo edit
-  execute 'buffer ' . curBuff
+  set ar
+  silent! bufdo checktime
+  set noar
   silent CommandTFlush
   echo "Checked out " . a:branch . ", reloaded all buffers, and flushed Command-T"
 endfunction
 function s:BranchComplete(A,L,P)
   return fugitive#buffer().repo().superglob(a:A)
 endfunction
-command! -nargs=1 -complete=customlist,s:BranchComplete Gcheckout call s:Gcheckout(<q-args>)
+command! -nargs=1 -complete=customlist,<SID>BranchComplete Gcheckout call s:Gcheckout(<q-args>)
 
 function s:NERDTreeOpenFind()
   wincmd l
