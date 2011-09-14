@@ -96,7 +96,15 @@ if !exists(":DiffOrig")
 endif
 
 " Javascript commands
-command Minify :w | !uglifyjs -nc -o %:r.min.%:e %
+function s:Minify(abspath, inpath, infile, outfile)
+  let myoutfile = a:inpath . '/' . a:outfile
+  if a:outfile == ''
+    let myoutfile = a:inpath . '/' . a:infile . '.min.js'
+  endif
+  exec ':silent !uglifyjs -nc -o ' . myoutfile . ' ' . a:abspath
+  echo 'Minified ' . a:abspath . ' to ' . myoutfile
+endfunction
+command! -nargs=? -complete=file Minify call <SID>Minify(expand("%:p"), expand("%:p:h"), expand("%:t:r"), <q-args>)
 command Jslint :w | !jslint.js --devel --browser --white --onevar --undef --nomen --regexp --plusplus --bitwise --newcap --maxerr=5 --indent=2 % 
 
 " Coffeescript commands
