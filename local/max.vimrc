@@ -18,6 +18,10 @@ function s:BranchComplete(A,L,P)
   return fugitive#buffer().repo().superglob(a:A)
 endfunction
 command! -nargs=1 -complete=customlist,<SID>BranchComplete Gcheckout call s:Gcheckout(<q-args>)
+function s:Gbranch(args)
+  exec "Git branch " . args
+endfunction
+command! -nargs=* -complete=customlist,<SID>BranchComplete Gbranch call s:Gbranch(<q-args>)
 
 function s:NERDTreeOpenFind()
   wincmd l
@@ -26,5 +30,9 @@ function s:NERDTreeOpenFind()
   NERDTreeFind
 endfunction
 map <leader>r :call <SID>NERDTreeOpenFind()<CR>
+
+" turn automake on for the current buffer
+command CoffeeAutoMakeOn let b:coffeeAutoMake = 1
+command CoffeeAutoMakeOff let b:coffeeAutoMake = 0
 
 au VimEnter * AutoComplPopEnable

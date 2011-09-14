@@ -100,7 +100,15 @@ command Minify :w | !uglifyjs -nc -o %:r.min.%:e %
 command Jslint :w | !jslint.js --devel --browser --white --onevar --undef --nomen --regexp --plusplus --bitwise --newcap --maxerr=5 --indent=2 % 
 
 " Coffeescript commands
-autocmd BufWritePost *.coffee silent CoffeeMake! -bp | cwindow
+autocmd BufNewFile,BufRead *.coffee let b:coffeeAutoMake = 0
+function s:CoffeeAutoMake()
+  if b:coffeeAutoMake == 1
+    silent CoffeeMake! -b | cwindow
+  else
+    silent CoffeeMake! -bp | cwindow
+  endif
+endfunction
+autocmd BufWritePost *.coffee call s:CoffeeAutoMake()
 command Cake :w | !cake build:all
 
 " Command-T preferences
