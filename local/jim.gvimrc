@@ -1,4 +1,4 @@
-source ~/.whim/ginit.vim
+source ~/.whim/gvimrc
 
 if has("gui_macvim")
   macm Window.Select\ Previous\ Tab  key=<S-D-[>

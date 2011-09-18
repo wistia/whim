@@ -1,4 +1,4 @@
-source ~/.whim/init.vim
+source ~/.whim/vimrc
 
 " enable auto complete
 au VimEnter * AutoComplPopEnable

@@ -1,1 +1,1 @@
-source ~/.whim/ginit.vim
+so ~/.whim/gvimrc

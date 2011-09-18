@@ -1,1 +1,3 @@
-source ~/.whim/ginit.vim
+source ~/.whim/gvimrc
+
+co brendan

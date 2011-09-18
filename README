@@ -16,19 +16,27 @@ To install whim:
     mv ~/.vimrc ~/.vimrc.backup 
     mv ~/.gvimrc ~/.gvimrc.backup 
 
-  1) Clone whim into ~/.whim and set up the defaults:
+  1) Install pathogen:
+
+    mkdir -p ~/.vim/autoload ~/.vim/bundle
+    curl https://raw.github.com/tpope/vim-pathogen/HEAD/autoload/pathogen.vim \
+      > ~/.vim/autoload/pathogen.vim
+
+
+  2) Clone whim into ~/.whim and set up the defaults:
 
     git clone git://github.com/wistia/whim.git ~/.whim
     ln -s ~/.whim/local/default.vimrc ~/.vimrc
     ln -s ~/.whim/local/default.gvimrc ~/.gvimrc
 
-  2) This step is optional. If you want your command-t plugin to work:
+  3) This step is optional. If you want your command-t plugin to work:
 
-    cd ~/.whim/ruby/command-t
-    ruby extconf.rb
-    make
+    cd ~/.whim/bundle/command-t
+    rvm use system
+    rake make
+    rvm use default
 
-  3) This step is optional. If you want to customize your setup:
+  4) This step is optional. If you want to customize your setup:
      
      Create a new file in ~/.whim/local, 
       then symlink it as in step 2! For example:
@@ -36,4 +44,4 @@ To install whim:
     ln -s ~/.whim/local/max.vimrc ~/.vimrc
     ln -s ~/.whim/local/max.gvimrc ~/.gvimrc
 
-  4) Restart (mac)vim and enjoy.
+  5) Restart (mac)vim and enjoy.
