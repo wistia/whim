@@ -1,10 +1,11 @@
 " Vim color file
 "
-" Author: Tomas Restrepo <tomas@winterdom.com>
+" Author: Brendan Schwartz <brendan@wistia.com>
 "
 " Note: Based on the monokai theme for textmate
 " by Wimer Hazenberg and its darker variant 
 " by Hamish Stuart Macpherson
+" and molokai by Tomas Restrepo <tomas@winterdom.com>
 "
 
 hi clear
@@ -18,13 +19,7 @@ if version > 580
         syntax reset
     endif
 endif
-let g:colors_name="molokai"
-
-if exists("g:molokai_original")
-    let s:molokai_original = g:molokai_original
-else
-    let s:molokai_original = 0
-endif
+let g:colors_name="brendan"
 
 
 hi Boolean         guifg=#AE81FF
@@ -102,25 +97,17 @@ hi Underlined      guifg=#808080               gui=underline
 
 hi VertSplit       guifg=#808080 guibg=#080808 gui=bold
 hi VisualNOS                     guibg=#403D3D
-hi Visual                        guibg=#403D3D
+"hi Visual                        guibg=#403D3D
+hi Visual                        guibg=#30343F
 hi WarningMsg      guifg=#FFFFFF guibg=#333333 gui=bold
 hi WildMenu        guifg=#66D9EF guibg=#000000
 
-if s:molokai_original == 1
-   hi Normal          guifg=#F8F8F2 guibg=#272822
-   hi Comment         guifg=#75715E
-   hi CursorLine                    guibg=#3E3D32
-   hi CursorColumn                  guibg=#3E3D32
-   hi LineNr          guifg=#BCBCBC guibg=#3B3A32
-   hi NonText         guifg=#BCBCBC guibg=#3B3A32
-else
-   hi Normal          guifg=#F8F8F2 guibg=#1B1D1E
-   hi Comment         guifg=#999999
-   hi CursorLine                    guibg=#293739
-   hi CursorColumn                  guibg=#293739
-   hi LineNr          guifg=#BCBCBC guibg=#232526
-   hi NonText         guifg=#BCBCBC guibg=#232526
-end
+hi Normal          guifg=#F8F8F2 guibg=#171B1F
+hi Comment         guifg=#999999
+hi CursorLine                    guibg=#293739
+hi CursorColumn                  guibg=#293739
+hi LineNr          guifg=#BCBCBC guibg=#21262F
+hi NonText         guifg=#BCBCBC guibg=#202528
 
 "
 " Support for 256-color terminal
