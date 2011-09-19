@@ -23,17 +23,20 @@ To install whim:
       > ~/.vim/autoload/pathogen.vim
 
 
-  2) Clone whim into ~/.whim and set up the defaults:
+  2) Clone whim into ~/.whim, install submodules, and set up the defaults:
 
     git clone git://github.com/wistia/whim.git ~/.whim
+    cd ~/.whim
+    git submodule update --init
     ln -s ~/.whim/local/default.vimrc ~/.vimrc
     ln -s ~/.whim/local/default.gvimrc ~/.gvimrc
 
   3) This step is optional. If you want your command-t plugin to work:
 
-    cd ~/.whim/bundle/command-t
+    cd ~/.whim/bundle/command-t/ruby/command-t
     rvm use system
-    rake make
+    ruby extconf.rb
+    make
     rvm use default
 
   4) This step is optional. If you want to customize your setup:
