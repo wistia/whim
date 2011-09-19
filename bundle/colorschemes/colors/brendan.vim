@@ -109,6 +109,17 @@ hi CursorColumn                  guibg=#293739
 hi LineNr          guifg=#BCBCBC guibg=#21262F
 hi NonText         guifg=#BCBCBC guibg=#202528
 
+" Ruby Highlighting
+hi rubySymbol      guifg=#C7A575
+"hi rubyConstant
+"hi rubyAttribute
+"hi rubyInclude
+"hi rubyLocalVariableOrMethod
+"hi rubyCurlyBlock
+hi rubyInstanceVariable guifg=#BE91FF
+
+
+"
 "
 " Support for 256-color terminal
 "
