@@ -50,7 +50,7 @@ To install whim:
     ln -s ~/.whim/local/max.vimrc ~/.vimrc
     ln -s ~/.whim/local/max.gvimrc ~/.gvimrc
 
-  5) Restart (mac)vim and enjoy.
+  5) Restart (mac/g)vim and enjoy.
 
 
 -------------
