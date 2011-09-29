@@ -36,3 +36,5 @@ command CoffeeAutoMakeOn let b:coffeeAutoMake = 1
 command CoffeeAutoMakeOff let b:coffeeAutoMake = 0
 
 au VimEnter * AutoComplPopEnable
+
+nmap <F4> :w<CR>:make<CR>:cw<CR>
