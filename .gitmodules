@@ -31,3 +31,6 @@
 [submodule "bundle/vim-markdown"]
 	path = bundle/vim-markdown
 	url = git://github.com/hallison/vim-markdown.git
+[submodule "bundle/vim-figlet"]
+	path = bundle/vim-figlet
+	url = https://github.com/vim-scripts/Figlet.vim.git
