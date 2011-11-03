@@ -1,0 +1,1 @@
+DrawIt.vba: call delete('/Users/maxschnur/.whim/bundle/acp/plugin/DrawItPlugin.vim')|call delete('/Users/maxschnur/.whim/bundle/acp/plugin/cecutil.vim')|call delete('/Users/maxschnur/.whim/bundle/acp/autoload/DrawIt.vim')|call delete('/Users/maxschnur/.whim/bundle/acp/doc/DrawIt.txt')

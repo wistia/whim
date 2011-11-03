@@ -131,6 +131,9 @@ let g:CommandTMatchWindowReverse=1
 map <leader>o :NERDTree<CR>
 map <leader>r :NERDTreeFind<CR>
 
+" Recognize md files as markdown
+au BufNewFile,BufRead *.md set filetype=markdown
+
 " Backup and swap configuration
 set wildignore+=*~,.git
 silent !mkdir -p ~/.vim/swap
