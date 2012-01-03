@@ -1,0 +1,1 @@
+so ~/.whim/gvimrc
