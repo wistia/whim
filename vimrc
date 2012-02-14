@@ -27,8 +27,10 @@ set ts=2 showcmd sw=2 sts=2   " set all tab widths to 2
 colorscheme molokai   " set molokai as the default colorscheme
 map Q gq
 inoremap <C-U> <C-G>u<C-U>
-if has('mouse')
+if has("gui_macvim")
   set mouse=a
+else
+  set mouse=r
 endif
 
 "
