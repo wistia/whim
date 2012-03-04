@@ -1,5 +1,11 @@
 so ~/.whim/vimrc
 
+" Integrate with the mouse by default
+set mouse=a
+
+" Don't highlight search terms by default
+set hlsearch!
+
 colo jellybeans
 let g:CommandTMaxFiles=30000
 let g:CommandTMaxHeight=18

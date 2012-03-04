@@ -64,6 +64,9 @@ nmap <D-[> <<
 vnoremap <D-[> <<CR>gv
 imap <D-[> <C-O><<
 
+" Press CTRL+N to toggle highlighting on/off, and show current value.
+noremap <C-N> :set hlsearch! hlsearch?<CR>
+
 " Enable file type detection.
 " Use the default filetype settings, so that mail gets 'tw' set to 72,
 " 'cindent' is on in C files, etc.
