@@ -139,6 +139,10 @@ map <leader>r :NERDTreeFind<CR>
 " Recognize md files as markdown
 au BufNewFile,BufRead *.md set filetype=markdown
 
+" VCL Syntax
+au BufRead,BufNewFile *.vcl :set ft=vcl
+au! Syntax vcl source ~/.whim/bundle/syntax/vcl.vim
+
 " Backup and swap configuration
 set wildignore+=*~,.git
 silent !mkdir -p ~/.vim/swap
@@ -150,3 +154,5 @@ au BufWritePre * let &backupext = substitute(expand("%:p"), "\/", "_", "g")
 
 " Disable acp by default
 au VimEnter * AutoComplPopDisable
+
+
