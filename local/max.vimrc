@@ -6,7 +6,7 @@ set mouse=a
 " Don't highlight search terms by default
 set hlsearch!
 
-colo jellybeans
+colo solarized
 let g:CommandTMaxFiles=30000
 let g:CommandTMaxHeight=18
 let g:CommandTMatchWindowAtTop=1
@@ -44,3 +44,13 @@ command CoffeeAutoMakeOff let b:coffeeAutoMake = 0
 au VimEnter * AutoComplPopEnable
 
 nmap <F4> :w<CR>:make<CR>:cw<CR>
+
+" Turn off arrow keys to force myself to use hjkl
+noremap  <Up> ""
+noremap! <Up> <Esc>
+noremap  <Down> ""
+noremap! <Down> <Esc>
+noremap  <Left> ""
+noremap! <Left> <Esc>
+noremap  <Right> ""
+noremap! <Right> <Esc>
