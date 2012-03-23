@@ -1,7 +1,9 @@
+
+let mapleader = "."
 so ~/.whim/vimrc
 
 color ir_black
-let mapleader = "."
+"let mapleader = "."
 
 set nocompatible
 set cursorline
@@ -45,11 +47,6 @@ let NERDTreeIgnore=['\.git','\.DS_Store','\.pdf', '.beam']
 
 let g:browser = 'open '
 
- " Tab navigation
-nmap <leader>tn :tabnext<CR>
-nmap <leader>tp :tabprevious<CR>
-nmap <leader>te :tabedit
-
 set nowrap
 
 "sm:    flashes matching brackets or parentheses
@@ -62,15 +59,15 @@ set showmatch
 " insert hashrocket, =>, with control-l
 imap <C-l> <Space>=><Space>
 
-"map <D-1> :tabn 1<CR>
-"map <D-2> :tabn 2<CR>
-"map <D-3> :tabn 3<CR>
-"map <D-4> :tabn 4<CR>
-"map <D-5> :tabn 5<CR>
-"map <D-6> :tabn 6<CR>
-"map <D-7> :tabn 7<CR>
-"map <D-8> :tabn 8<CR>
-"map <D-9> :tabn 9<CR>
+" Tab navigation
+"nmap <leader>tn :tabnext<CR>
+"nmap <leader>tp :tabprevious<CR>
+"nmap <leader>te :tabedit
+
+map th :tabprev<CR>
+map tl :tabnext<CR>
+map tn :tabnew<CR>
+map td :tabclose<CR>
 
 " (thanks, Brendan) Map W to w and Q to q, because I always fatfinger them
 :command W w
