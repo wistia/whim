@@ -35,7 +35,8 @@ function s:NERDTreeOpenFind()
   wincmd l
   NERDTreeFind
 endfunction
-map <leader>r :call <SID>NERDTreeOpenFind()<CR>
+map <leader>r :call <SID>NERDTreeOpenFind()<CR> :set nu<CR>
+map <leader>o :NERDTree<CR> :set nu<CR>
 
 " turn automake on for the current buffer
 command CoffeeAutoMakeOn let b:coffeeAutoMake = 1
@@ -46,11 +47,11 @@ au VimEnter * AutoComplPopEnable
 nmap <F4> :w<CR>:make<CR>:cw<CR>
 
 " Turn off arrow keys to force myself to use hjkl
-noremap  <Up> ""
-noremap! <Up> <Esc>
-noremap  <Down> ""
-noremap! <Down> <Esc>
-noremap  <Left> ""
-noremap! <Left> <Esc>
-noremap  <Right> ""
-noremap! <Right> <Esc>
+" noremap  <Up> ""
+" noremap! <Up> <Esc>
+" noremap  <Down> ""
+" noremap! <Down> <Esc>
+" noremap  <Left> ""
+" noremap! <Left> <Esc>
+" noremap  <Right> ""
+" noremap! <Right> <Esc>
