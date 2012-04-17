@@ -37,3 +37,9 @@
 [submodule "bundle/vim-tabbi"]
 	path = bundle/vim-tabbi
 	url = https://github.com/vim-scripts/Tabbi.git
+[submodule "bundle/webapi-vim"]
+	path = bundle/webapi-vim
+	url = https://github.com/mattn/webapi-vim.git
+[submodule "bundle/gist-vim"]
+	path = bundle/gist-vim
+	url = https://github.com/mattn/gist-vim.git
