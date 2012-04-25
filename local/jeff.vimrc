@@ -1,7 +1,6 @@
 source ~/.whim/vimrc
 set nocompatible
 filetype off  " required!
-autocmd vimenter * NERDTree
 
 
 set rtp+=~/.vim/vundle.git/ 
@@ -12,9 +11,12 @@ call vundle#rc()
 " " original repos on github
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'tpope/vim-rails.git'
+Bundle 'nelstrom/vim-markdown-preview'
+
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
-
+Bundle 'snipMate'
+Bundle 'css_color.vim'
 
 
 
