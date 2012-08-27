@@ -46,6 +46,54 @@ au VimEnter * AutoComplPopEnable
 
 nmap <F4> :w<CR>:make<CR>:cw<CR>
 
+" Functions to do partial splits and joins with two lines.
+function! s:joinBelow()
+  let c = v:count1
+  let i = 0
+  while i < c
+    norm $Jf rk$
+    let i += 1
+  endwhile
+endfunction
+function! s:splitBelow()
+  let c = v:count1
+  let i = 0
+  if line(".") == line("$")
+    norm ok
+  end
+  while i < c
+    norm j@kk$
+    let i += 1
+  endwhile
+endfunction
+function! s:joinAbove()
+  let c = v:count1
+  let i = 0
+  while i < c
+    norm k$JF r^
+    let i += 1
+  endwhile
+endfunction
+function! s:splitAbove()
+  let c = v:count1
+  let i = 0
+  if line(".") == 1
+    norm Oj
+  end
+  while i < c
+    norm k@jj^
+    let i+= 1
+  endwhile
+endfunction
+
+" ALT+j/ALT+J
+nnoremap <silent> ∆ :<C-U>call <SID>splitBelow()<CR>
+nnoremap <silent> Ô :<C-U>call <SID>joinBelow()<CR>
+
+" ALT+k/ALT+K
+nnoremap <silent> ˚ :<C-U>call <SID>splitAbove()<CR>
+nnoremap <silent>  :<C-U>call <SID>joinAbove()<CR>
+
 " Turn off arrow keys to force myself to use hjkl
 " noremap  <Up> ""
 " noremap! <Up> <Esc>
