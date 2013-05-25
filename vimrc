@@ -155,4 +155,5 @@ au BufWritePre * let &backupext = substitute(expand("%:p"), "\/", "_", "g")
 " Disable acp by default
 au VimEnter * AutoComplPopDisable
 
-
+" So language syntax highlighting works in markdown using fenced code blocks
+let g:markdown_fenced_languages = ['ruby', 'javascript', 'html', 'python', 'css']

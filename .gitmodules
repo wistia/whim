@@ -28,9 +28,6 @@
 [submodule "bundle/vim-ack"]
 	path = bundle/vim-ack
 	url = https://github.com/mileszs/ack.vim.git
-[submodule "bundle/vim-markdown"]
-	path = bundle/vim-markdown
-	url = git://github.com/hallison/vim-markdown.git
 [submodule "bundle/vim-figlet"]
 	path = bundle/vim-figlet
 	url = https://github.com/vim-scripts/Figlet.vim.git
@@ -43,3 +40,6 @@
 [submodule "bundle/gist-vim"]
 	path = bundle/gist-vim
 	url = https://github.com/mattn/gist-vim.git
+[submodule "bundle/vim-markdown"]
+	path = bundle/vim-markdown
+	url = https://github.com/tpope/vim-markdown.git
