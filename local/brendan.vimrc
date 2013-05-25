@@ -20,3 +20,18 @@ map <leader>o :NERDTreeToggle \| :silent NERDTreeMirror<CR>
 
 " this is my home!!!
 cd ~/active_projects
+
+" Turn off arrow keys to force myself to use hjkl
+noremap  <Up> ""
+noremap! <Up> <Esc>
+noremap  <Down> ""
+noremap! <Down> <Esc>
+noremap  <Left> ""
+noremap! <Left> <Esc>
+noremap  <Right> ""
+noremap! <Right> <Esc>
+
+" Use The Silver Searcher instead of grep
+if executable("ag")
+  set grepprg=ag\ --noheading\ --nogroup\ --nocolor
+endif
