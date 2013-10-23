@@ -1,3 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/Users/maxschnur/Projects/inotherwords/inotherwords/app/views/inotherwords'
+let g:netrw_dirhist_2='/usr/local/Cellar/macvim/7.3-65/MacVim.app'
+let g:netrw_dirhist_3='/Users/maxschnur/.rvm/gems/ruby-1.9.3-p0@wistia-rails3/gems/activeresource-3.1.1/lib/active_resource'
+let g:netrw_dirhist_4='/Users/maxschnur/Wistia/wistia/app/static/E/v1'
+let g:netrw_dirhist_5='/Users/maxschnur/.rvm/gems/ruby-1.9.3-p385@wistia-rails3/gems/srt-0.0.3/lib/srt'
+let g:netrw_dirhist_6='/Users/maxschnur/Wistia/wistia/lib/embed_codes'
+let g:netrw_dirhist_7='/Users/maxschnur/Wistia/wistia/app/assets/images/images'
+let g:netrw_dirhist_8='/Users/maxschnur/Wistia/wistia/app/assets/stylesheets/stylesheets'
+let g:netrw_dirhist_9='/Users/maxschnur/Wistia/wistia/spec/jasmine/spec'

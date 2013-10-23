@@ -86,6 +86,13 @@ function! s:splitAbove()
   endwhile
 endfunction
 
+set wildignore+=*/tmp/*,*/cache/*,*/backups/*,*.so,*.swp,*.zip,*/doc/generated/*
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_map = '<leader>t'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_match_window_bottom = 0
+let g:ctrlp_match_window_reversed = 0
+
 " ALT+j/ALT+J
 nnoremap <silent> ∆ :<C-U>call <SID>splitBelow()<CR>
 nnoremap <silent> Ô :<C-U>call <SID>joinBelow()<CR>
@@ -103,3 +110,9 @@ nnoremap <silent>  :<C-U>call <SID>joinAbove()<CR>
 " noremap! <Left> <Esc>
 " noremap  <Right> ""
 " noremap! <Right> <Esc>
+
+if exists('+colorcolumn')
+  set colorcolumn=80
+else
+  au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+endif
