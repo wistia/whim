@@ -2,7 +2,7 @@
 " whim plugin loading
 "
 "
-call pathogen#infect(expand("<sfile>:h") . '/bundle')
+call pathogen#infect(expand("<sfile>:h") . '/bundle/{}')
 call pathogen#infect()
 syntax on
 filetype plugin indent on
