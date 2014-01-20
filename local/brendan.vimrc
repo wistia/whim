@@ -22,16 +22,26 @@ map <leader>o :NERDTreeToggle \| :silent NERDTreeMirror<CR>
 cd ~/active_projects
 
 " Turn off arrow keys to force myself to use hjkl
-noremap  <Up> ""
-noremap! <Up> <Esc>
-noremap  <Down> ""
-noremap! <Down> <Esc>
-noremap  <Left> ""
-noremap! <Left> <Esc>
-noremap  <Right> ""
-noremap! <Right> <Esc>
+"noremap  <Up> ""
+"noremap! <Up> <Esc>
+"noremap  <Down> ""
+"noremap! <Down> <Esc>
+"noremap  <Left> ""
+"noremap! <Left> <Esc>
+"noremap  <Right> ""
+"noremap! <Right> <Esc>
+
+au VimEnter * AutoComplPopEnable
+
+" Reveal trailing whitespace
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=darkred guibg=darkred
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
 
 " Use The Silver Searcher instead of grep
 if executable("ag")
   set grepprg=ag\ --noheading\ --nogroup\ --nocolor
 endif
+
