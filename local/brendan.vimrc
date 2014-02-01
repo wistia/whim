@@ -3,8 +3,14 @@ source ~/.whim/vimrc
 " Integrate with the mouse by default
 set mouse=a
 
+" Make sure in the terminal we use 256 colors and not 8, like a chump
+let &t_Co=256
+
 " Solarized for vim diffin'
-colo solarized
+colo brendan
+if &diff
+  colo solarized
+endif
 
 " Two semicolons to get out of insert mode
 :imap ;; <Esc>
@@ -34,11 +40,14 @@ cd ~/active_projects
 au VimEnter * AutoComplPopEnable
 
 " Reveal trailing whitespace
+highlight ExtraWhitespace ctermbg=darkred guibg=darkred
+match ExtraWhitespace /\s\+$/
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=darkred guibg=darkred
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
+
 
 " Use The Silver Searcher instead of grep
 if executable("ag")
