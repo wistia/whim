@@ -143,6 +143,10 @@ au BufNewFile,BufRead *.md set filetype=markdown
 au BufRead,BufNewFile *.vcl :set ft=vcl
 au! Syntax vcl source ~/.whim/bundle/syntax/vcl.vim
 
+" Scala Syntax
+au BufRead,BufNewFile *.scala :set ft=scala
+au! Syntax scala source ~/.whim/bundle/syntax/scala.vim
+
 " Backup and swap configuration
 set wildignore+=*~,.git
 silent !mkdir -p ~/.vim/swap
