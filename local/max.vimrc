@@ -6,7 +6,11 @@ set mouse=a
 " Don't highlight search terms by default
 set hlsearch!
 
-colo solarized
+set t_Co=256
+colo desertex
+if &diff
+  colorscheme github
+endif
 let g:CommandTMaxFiles=30000
 let g:CommandTMaxHeight=18
 let g:CommandTMatchWindowAtTop=1
@@ -130,3 +134,6 @@ endfunction
 
 " Run :FixWhitespace to remove end of line white space
 command! -range=% FixWhitespace call <SID>FixWhitespace(<line1>,<line2>)
+
+" Turn on streak mode for vim-sneak
+let g:sneak#streak = 1
