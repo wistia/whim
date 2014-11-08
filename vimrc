@@ -143,6 +143,10 @@ au BufNewFile,BufRead *.md set filetype=markdown
 au BufRead,BufNewFile *.vcl :set ft=vcl
 au! Syntax vcl source ~/.whim/bundle/syntax/vcl.vim
 
+" Golang Syntax
+au BufRead,BufNewFile *.go :set ft=golang
+au! Syntax golang source ~/.whim/bundle/syntax/golang.vim
+
 " Scala Syntax
 au BufRead,BufNewFile *.scala :set ft=scala
 au! Syntax scala source ~/.whim/bundle/syntax/scala.vim
