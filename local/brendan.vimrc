@@ -54,3 +54,9 @@ if executable("ag")
   set grepprg=ag\ --noheading\ --nogroup\ --nocolor
 endif
 
+set wildignore+=*/tmp/*,*/cache/*,*/backups/*,*.so,*.swp,*.zip,*/doc/generated/*
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_map = '<leader>t'
+let g:ctrlp_cmd = 'CtrlP ~/active_projects'
+let g:ctrlp_follow_symlinks = 1
+let g:ctrlp_custom_ignore = { 'dir':  'node_modules' }
