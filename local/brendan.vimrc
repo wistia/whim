@@ -1,4 +1,5 @@
 source ~/.whim/vimrc
+set shell=/bin/bash
 
 " Integrate with the mouse by default
 set mouse=a
